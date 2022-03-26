@@ -19,7 +19,7 @@ Cliente;';
 Create Table produto (
 	id_produto SERIAL PRIMARY KEY NOT NULL,
 	nome VARCHAR(40) NOT NULL,
-	preco FLOAT NOT NULL,
+	preco REAL NOT NULL,
 	quant_est INTEGER NOT NULL,
 	descricao VARCHAR(100)
 )
