@@ -1,5 +1,5 @@
 //Arquivo responsável pela chamada da API
-const express =  require('express');
+const express = require('express');
 const router = express.Router();
 router.get('/api',(req,res) => {
     res.status(200).send({
