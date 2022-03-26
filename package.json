@@ -2,15 +2,24 @@
   "name": "produto-crud-api",
   "version": "1.0.0",
   "description": "Aplicação CRUD com API, Angular, Node e Postgresql",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "lint": "eslint --ext .js -f ./node_modules/eslint-friendly-formatter . --fix",
+    "prepush": "npm run lint",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Giuseppe88Reis/produto-crud-api.git"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "crud",
+    "api",
+    "angular",
+    "postgresql"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
@@ -25,6 +34,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
     "express": "^4.17.3",
     "express-promise-router": "^4.1.1",
     "pg": "^8.7.3"
