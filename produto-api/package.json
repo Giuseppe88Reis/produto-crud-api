@@ -20,7 +20,7 @@
     "angular",
     "postgresql"
   ],
-  "author": "",
+  "author": "Giuseppe Reis",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Giuseppe88Reis/produto-crud-api/issues"
