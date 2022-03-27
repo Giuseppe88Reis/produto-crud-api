@@ -17,6 +17,7 @@ import { ProdutoGetComponent } from './produto-get/produto-get.component';
   imports: [
     BrowserModule,
     AppRoutingModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
