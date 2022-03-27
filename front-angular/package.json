@@ -20,6 +20,7 @@
     "@angular/router": "~13.3.0",
     "@fortawesome/angular-fontawesome": "^0.10.2",
     "bootstrap": "^5.1.3",
+    "ng2-al-slim-bar": "^0.0.4",
     "ng2-slim-loading-bar-observables": "^1.4.4",
     "rxjs": "~7.5.0",
     "rxjs-compat": "^6.6.7",

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SlimLoadingBarModule } from "ng2-al-slim-bar";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +17,8 @@ import { ProdutoGetComponent } from './produto-get/produto-get.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-   
+    AppRoutingModule,
+    SlimLoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
