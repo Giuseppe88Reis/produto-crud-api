@@ -1,12 +1,17 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SlimLoadingBarModule } from "ng2-al-slim-bar";
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import ptBr from '@angular/common/locales/br';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProdutoAddComponent } from './produto-add/produto-add.component';
 import { ProdutoEditComponent } from './produto-edit/produto-edit.component';
 import { ProdutoGetComponent } from './produto-get/produto-get.component';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr, 'pt-Br');
 
 @NgModule({
   declarations: [
@@ -18,9 +23,14 @@ import { ProdutoGetComponent } from './produto-get/produto-get.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlimLoadingBarModule
+    SlimLoadingBarModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide:LOCALE_ID,
+    useValue: 'pt-Br'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

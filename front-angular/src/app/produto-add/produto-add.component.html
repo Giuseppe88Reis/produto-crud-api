@@ -1,22 +1,80 @@
 <div class="card">
     <div class="card-body">
-        <form>
+        <form [formGroup]="produtoForm" novalidate>
+
+           <!-- Início do campo nome -->
             <div class="form-grupo">
                <label for="nome-produto"><b>Nome</b></label>
-               <input type="text" class="form-control" placeholder="Digite o nome do produto"/>
+               <input 
+               type="text" 
+               class="form-control"
+               placeholder="Digite o nome do produto"
+               formControlName="produtoNome"
+               #produtoNome
+               />
             </div>
+            <div *ngIf="produtoForm.controls['produtoNome'].invalid && 
+                        (produtoForm.controls['produtoNome'].dirty ||
+                         produtoForm.controls['produtoNome'].touched)"
+                         class="alert alert-danger">
+               <div *ngIf="produtoForm.controls['produtoNome'].errors">
+                  Este campo é obrigatório.
+               </div>  
+            </div>
+            <!-- Fim do campo nome -->
+
+            <!-- Início do campo preço -->
             <div class="form-grupo">
-                <label for="preco-produto" ><b>Preço</b></label>
-                <input type="text" class="form-control" placeholder="Digite o preço do produto"/>
+                <label for="preco" ><b>Preço</b></label>
+                <input
+                 type="text"
+                 class="form-control" 
+                 placeholder="Digite o preço do produto"
+                 formControlName="preco"
+                 #preco
+                 />
              </div>
+             <div *ngIf="produtoForm.controls['preco'].invalid && 
+                        (produtoForm.controls['preco'].dirty ||
+                         produtoForm.controls['preco'].touched)"
+                         class="alert alert-danger">
+               <div *ngIf="produtoForm.controls['preco'].errors">
+                  Este campo é obrigatório.
+               </div>  
+            </div>
+           <!-- Fim do campo preço -->  
+
+           <!-- Início do campo quantidade -->  
              <div class="form-grupo">
-                <label for="quant_est-produto"><b>Quantidade</b></label>
-                <input type="text" class="form-control" placeholder="Digite a quantidade em estoque do produto"/>
+                <label for="quant_est"><b>Quantidade</b></label>
+                <input 
+                type="text"
+                class="form-control" 
+                placeholder="Digite a quantidade em estoque do produto"
+                formControlName="quantEst"
+                #quantEst
+                />
              </div>
+             <div *ngIf="produtoForm.controls['quantEst'].invalid && 
+                         (produtoForm.controls['quantEst'].dirty ||
+                          produtoForm.controls['quantEst'].touched)"
+                          class="alert alert-danger">
+                <div *ngIf="produtoForm.controls['quantEst'].errors">
+                   Este campo é obrigatório.
+                </div>  
+             </div>
+           <!-- Fim do campo quantidade -->    
+
+           <!-- Início do campo descrição -->  
              <div class="form-grupo">
-                <label for="descricao-produto"><b>Descrição</b></label>
-                <input type="text" class="form-control" placeholder="Digite a descrição do produto"/>
+                <label for="descricao"><b>Descrição</b></label>
+                <input 
+                type="text"
+                class="form-control" 
+                placeholder="Digite a descrição do produto"
+                />
              </div>
+           <!-- Fim do campo descrição -->    
         </form>
     </div>
 </div>
